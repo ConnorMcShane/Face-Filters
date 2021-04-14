@@ -19,4 +19,7 @@ pip install -r requirements.txt
 Download the 68 point landmark face detector [here](https://github.com/italojs/facial-landmarks-recognition-/blob/master/shape_predictor_68_face_landmarks.dat)
 ## Usage
 
-Run main.py
+Replace the selfie video with your own and run main.py
+## Results
+
+![Alt Text](images/out.gif)
