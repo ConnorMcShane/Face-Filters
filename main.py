@@ -9,11 +9,11 @@ p = "shape_predictor_68_face_landmarks.dat"
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(p)
 
-mustache = Prop("mustache.png", "mustache")
-glasses = Prop("glasses.png", "glasses")
-hat = Prop("hat.png", "hat")
+mustache = Prop("images/mustache.png", "mustache")
+glasses = Prop("images/glasses.png", "glasses")
+hat = Prop("images/hat.png", "hat")
 
-cap = cv2.VideoCapture('selfie_video.MOV')
+cap = cv2.VideoCapture('images/selfie_video.MOV')
 
 if (cap.isOpened()== False): 
   print("Error opening video  file")
@@ -48,7 +48,7 @@ while(cap.isOpened()):
             
             image = mustache.apply_prop(image, shape)
             image = glasses.apply_prop(image, shape)
-            image = hat.apply_prop(image, shape)
+            # image = hat.apply_prop(image, shape)
 
             # image = draw_points(image, shape)
             # yaw = get_yaw(shape)
